@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		917A22651DAD3131009F9060 /* SwitchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22641DAD3131009F9060 /* SwitchControl.swift */; };
 		917A22671DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */; };
 		917A22691DAD3B8E009F9060 /* XCTAssert+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22681DAD3B8E009F9060 /* XCTAssert+Type.swift */; };
 		918749971DAD2F1C00F2F507 /* SwitchControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9187498D1DAD2F1B00F2F507 /* SwitchControl.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		917A22641DAD3131009F9060 /* SwitchControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchControl.swift; sourceTree = "<group>"; };
 		917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTAssert+LayoutConstraint.swift"; sourceTree = "<group>"; };
 		917A22681DAD3B8E009F9060 /* XCTAssert+Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTAssert+Type.swift"; sourceTree = "<group>"; };
 		9187498D1DAD2F1B00F2F507 /* SwitchControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwitchControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				918749901DAD2F1B00F2F507 /* SwitchControl.h */,
+				917A22641DAD3131009F9060 /* SwitchControl.swift */,
 				918749911DAD2F1B00F2F507 /* Info.plist */,
 			);
 			path = SwitchControl;
@@ -155,6 +158,7 @@
 					9187498C1DAD2F1B00F2F507 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = N8AX3PDDY9;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					918749951DAD2F1C00F2F507 = {
@@ -204,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917A22651DAD3131009F9060 /* SwitchControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +335,7 @@
 		918749A21DAD2F1C00F2F507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N8AX3PDDY9;
@@ -342,6 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = TBD.SwitchControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -349,6 +356,7 @@
 		918749A31DAD2F1C00F2F507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N8AX3PDDY9;
@@ -368,6 +376,7 @@
 		918749A51DAD2F1C00F2F507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = N8AX3PDDY9;
 				INFOPLIST_FILE = SwitchControlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -380,6 +389,7 @@
 		918749A61DAD2F1C00F2F507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = N8AX3PDDY9;
 				INFOPLIST_FILE = SwitchControlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -408,6 +418,7 @@
 				918749A31DAD2F1C00F2F507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		918749A41DAD2F1C00F2F507 /* Build configuration list for PBXNativeTarget "SwitchControlTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +427,7 @@
 				918749A61DAD2F1C00F2F507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
