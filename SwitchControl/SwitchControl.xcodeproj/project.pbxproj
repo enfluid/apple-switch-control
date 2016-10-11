@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		917A22671DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */; };
+		917A22691DAD3B8E009F9060 /* XCTAssert+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22681DAD3B8E009F9060 /* XCTAssert+Type.swift */; };
 		918749971DAD2F1C00F2F507 /* SwitchControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9187498D1DAD2F1B00F2F507 /* SwitchControl.framework */; };
 		9187499C1DAD2F1C00F2F507 /* SwitchControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9187499B1DAD2F1C00F2F507 /* SwitchControlTests.swift */; };
 		9187499E1DAD2F1C00F2F507 /* SwitchControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 918749901DAD2F1B00F2F507 /* SwitchControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +25,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTAssert+LayoutConstraint.swift"; sourceTree = "<group>"; };
+		917A22681DAD3B8E009F9060 /* XCTAssert+Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTAssert+Type.swift"; sourceTree = "<group>"; };
 		9187498D1DAD2F1B00F2F507 /* SwitchControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwitchControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		918749901DAD2F1B00F2F507 /* SwitchControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchControl.h; sourceTree = "<group>"; };
 		918749911DAD2F1B00F2F507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				9187499B1DAD2F1C00F2F507 /* SwitchControlTests.swift */,
+				917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */,
+				917A22681DAD3B8E009F9060 /* XCTAssert+Type.swift */,
 				9187499D1DAD2F1C00F2F507 /* Info.plist */,
 			);
 			path = SwitchControlTests;
@@ -205,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917A22691DAD3B8E009F9060 /* XCTAssert+Type.swift in Sources */,
+				917A22671DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift in Sources */,
 				9187499C1DAD2F1C00F2F507 /* SwitchControlTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
