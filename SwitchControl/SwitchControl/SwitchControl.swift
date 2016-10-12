@@ -4,18 +4,18 @@ public class SwitchControl: UIControl {
 
     enum SelectedSegment { case top, bottom }
 
-    let labels = (top: UILabel(), bottom: UILabel())
+    let labels = (top: SwitchControlLabel(), bottom: SwitchControlLabel())
     let stackView = UIStackView()
 
     var selectedSegment: SelectedSegment = .top {
         didSet {
             switch selectedSegment {
             case .top:
-                labels.top.backgroundColor = tintColor
-                labels.bottom.backgroundColor = nil
+                labels.top.isSelected = true
+                labels.bottom.isSelected = false
             case .bottom:
-                labels.top.backgroundColor = nil
-                labels.bottom.backgroundColor =  tintColor
+                labels.top.isSelected = false
+                labels.bottom.isSelected = true
             }
         }
     }
@@ -23,9 +23,9 @@ public class SwitchControl: UIControl {
     init(topTitle: String, bottomTitle: String) {
         super.init(frame: .zero)
         configureStackView()
+        labels.top.isSelected = true
         labels.top.text = topTitle
         labels.bottom.text = bottomTitle
-        labels.top.backgroundColor = tintColor
     }
 
     private func configureStackView() {
