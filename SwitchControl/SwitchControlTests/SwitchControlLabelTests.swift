@@ -13,6 +13,14 @@ class SwitchControlLabelTests: XCTestCase {
         XCTAssertType(Bool.self, of: switchControlLabel.isSelected)
     }
 
+    func testFrame() {
+        XCTAssertEqual(switchControlLabel.frame, .zero)
+    }
+
+    func testLayerCornerRadius() {
+        XCTAssertEqual(switchControlLabel.layer.cornerRadius, 4)
+    }
+
     func testSelectedDefault() {
         XCTAssertFalse(switchControlLabel.isSelected)
     }
