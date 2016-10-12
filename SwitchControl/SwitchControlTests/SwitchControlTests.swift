@@ -12,6 +12,11 @@ class SwitchControlTests: XCTestCase {
         XCTAssert(switchControl as Any is UIControl)
     }
 
+    func testUnarchiving() {
+        let switchControl = SwitchControl(coder: .empty)
+        XCTAssertNil(switchControl)
+    }
+
     func testFrame() {
         XCTAssertEqual(switchControl.frame, .zero)
     }
@@ -23,7 +28,7 @@ class SwitchControlTests: XCTestCase {
     // MARK: Labels
 
     func testLabelsType() {
-        XCTAssertType((UILabel, UILabel).self, of: switchControl.labels)
+        XCTAssert(switchControl.labels as Any is (SwitchControlLabel, SwitchControlLabel))
     }
 
     // MARK: Top label
@@ -40,29 +45,18 @@ class SwitchControlTests: XCTestCase {
         XCTAssertEqual(switchControl.labels.top.text, topTitle)
     }
 
-    func testTopLabelDefaultBackgroundColor() {
-        XCTAssertEqual(switchControl.labels.top.backgroundColor, switchControl.tintColor)
+    func testTopLabelSelectedDefault() {
+        XCTAssert(switchControl.labels.top.isSelected)
     }
 
-    func testTopLabelSelectedBackgroundColor1() {
-        let tintColor: UIColor = .red
-        switchControl.tintColor = tintColor
-        switchControl.labels.top.backgroundColor = nil
-        switchControl.selectedSegment = .top
-        XCTAssertEqual(switchControl.labels.top.backgroundColor, tintColor)
-    }
-
-    func testTopLabelSelectedBackgroundColor2() {
-        let tintColor: UIColor = .green
-        switchControl.tintColor = tintColor
-        switchControl.labels.top.backgroundColor = nil
-        switchControl.selectedSegment = .top
-        XCTAssertEqual(switchControl.labels.top.backgroundColor, tintColor)
-    }
-
-    func testTopLabelDeselectedBackgroundColor() {
+    func testTopLabelSelectedForSelectedSegment1() {
         switchControl.selectedSegment = .bottom
-        XCTAssertNil(switchControl.labels.top.backgroundColor)
+        XCTAssertFalse(switchControl.labels.top.isSelected)
+    }
+
+    func testTopLabelSelectedForSelectedSegment2() {
+        switchControl.selectedSegment = .top
+        XCTAssert(switchControl.labels.top.isSelected)
     }
 
     // MARK: Bottom label
@@ -79,30 +73,21 @@ class SwitchControlTests: XCTestCase {
         XCTAssertEqual(switchControl.labels.bottom.text, bottomTitle)
     }
 
-    func testBottomLabelSelectedBackgroundColor1() {
-        let tintColor: UIColor = .red
-        switchControl.tintColor = tintColor
-        switchControl.selectedSegment = .bottom
-        XCTAssertEqual(switchControl.labels.bottom.backgroundColor, tintColor)
-    }
-
-    func testBottomLabelSelectedBackgroundColor2() {
-        let tintColor: UIColor = .green
-        switchControl.tintColor = tintColor
-        switchControl.selectedSegment = .bottom
-        XCTAssertEqual(switchControl.labels.bottom.backgroundColor, tintColor)
-    }
-
-    func testBottomLabelDeselectedBackgroundColor() {
-        switchControl.labels.bottom.backgroundColor = .red
+    func testBottomLabelForSelectedSegment1() {
+        switchControl.labels.bottom.isSelected = true
         switchControl.selectedSegment = .top
-        XCTAssertNil(switchControl.labels.bottom.backgroundColor)
+        XCTAssertFalse(switchControl.labels.bottom.isSelected)
+    }
+
+    func testBottomLabelForSelectedSegment2() {
+        switchControl.selectedSegment = .bottom
+        XCTAssert(switchControl.labels.bottom.isSelected)
     }
 
     // MARK: Stack view
 
     func testStackViewType() {
-        XCTAssertType(UIStackView.self, of: switchControl.stackView)
+        XCTAssert(switchControl.stackView as Any is UIStackView)
     }
 
     func testStackViewArrangedSubviews() {
@@ -138,7 +123,7 @@ class SwitchControlTests: XCTestCase {
     }
 
     func testSelectedSegmentType() {
-        XCTAssertType(SwitchControl.SelectedSegment.self, of: switchControl.selectedSegment)
+        XCTAssert(switchControl.selectedSegment as Any is SwitchControl.SelectedSegment)
     }
 
     func testSelectedSegmentDefault() {
