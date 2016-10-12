@@ -12,6 +12,11 @@ class SwitchControlTests: XCTestCase {
         XCTAssert(switchControl as Any is UIControl)
     }
 
+    func testUnarchiving() {
+        let switchControl = SwitchControl(coder: .empty)
+        XCTAssertNil(switchControl)
+    }
+
     func testFrame() {
         XCTAssertEqual(switchControl.frame, .zero)
     }

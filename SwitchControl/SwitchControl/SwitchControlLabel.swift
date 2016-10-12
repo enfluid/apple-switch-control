@@ -13,8 +13,8 @@ final class SwitchControlLabel: UILabel {
         layer.cornerRadius = 4
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        return nil
     }
 
     override func tintColorDidChange() {

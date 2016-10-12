@@ -3,10 +3,15 @@ import XCTest
 
 class SwitchControlLabelTests: XCTestCase {
 
-    let switchControlLabel = SwitchControlLabel()
+    lazy var switchControlLabel = SwitchControlLabel()
 
     func testSuperclass() {
         XCTAssert(switchControlLabel as Any is UILabel)
+    }
+
+    func testUnarchiving() {
+        let switchControlLabel = SwitchControlLabel(coder: .empty)
+        XCTAssertNil(switchControlLabel)
     }
 
     func testSelectedType() {
