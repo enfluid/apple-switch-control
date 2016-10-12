@@ -5,6 +5,8 @@ class SwitchControlLabelTests: XCTestCase {
 
     lazy var switchControlLabel = SwitchControlLabel()
 
+    // MARK: Main
+
     func testSuperclass() {
         XCTAssert(switchControlLabel as Any is UILabel)
     }
@@ -26,9 +28,13 @@ class SwitchControlLabelTests: XCTestCase {
         XCTAssertEqual(switchControlLabel.layer.cornerRadius, 4)
     }
 
+    // MARK: Selected
+
     func testSelectedDefault() {
         XCTAssertFalse(switchControlLabel.isSelected)
     }
+
+    // MARK: Background color
 
     func testBackgroundColorWhenSelected1() {
         let tintColor: UIColor = .red
@@ -67,8 +73,53 @@ class SwitchControlLabelTests: XCTestCase {
     func testBackgroundColorWhenTintColorDidChange3() {
         let backgroundColor: UIColor = .red
         switchControlLabel.backgroundColor = backgroundColor
-        switchControlLabel.tintColor = .green
+        switchControlLabel.tintColorDidChange()
         XCTAssertEqual(switchControlLabel.backgroundColor, backgroundColor)
+    }
+
+    // MARK: Text color
+
+    func testTextColor1() {
+        XCTAssertEqual(switchControlLabel.textColor, switchControlLabel.tintColor)
+    }
+
+    func testTextColorWhenTintColorDidChange1() {
+        let tintColor: UIColor = .red
+        switchControlLabel.tintColor = tintColor
+        XCTAssertEqual(switchControlLabel.textColor, tintColor)
+    }
+
+    func testTextColorWhenTintColorDidChange2() {
+        let tintColor: UIColor = .green
+        switchControlLabel.tintColor = tintColor
+        XCTAssertEqual(switchControlLabel.textColor, tintColor)
+    }
+
+    func testTextColorWhenSelected() {
+        switchControlLabel.isSelected = true
+        XCTAssertEqual(switchControlLabel.textColor, .white)
+    }
+
+    func testTextColorWhenDeselected1() {
+        let tintColor: UIColor = .red
+        switchControlLabel.tintColor = tintColor
+        switchControlLabel.textColor = .black
+        switchControlLabel.isSelected = false
+        XCTAssertEqual(switchControlLabel.textColor, tintColor)
+    }
+
+    func testTextColorWhenDeselected2() {
+        let tintColor: UIColor = .green
+        switchControlLabel.tintColor = tintColor
+        switchControlLabel.textColor = .black
+        switchControlLabel.isSelected = false
+        XCTAssertEqual(switchControlLabel.textColor, tintColor)
+    }
+
+    func testSelectedTextColorWhenTintColorDidChange() {
+        switchControlLabel.isSelected = true
+        switchControlLabel.tintColorDidChange()
+        XCTAssertEqual(switchControlLabel.textColor, .white)
     }
 
 }
