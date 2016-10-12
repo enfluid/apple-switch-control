@@ -17,7 +17,7 @@ class SwitchControlLabelTests: XCTestCase {
     }
 
     func testSelectedType() {
-        XCTAssertType(Bool.self, of: switchControlLabel.isSelected)
+        XCTAssert(switchControlLabel.isSelected as Any is Bool)
     }
 
     func testFrame() {

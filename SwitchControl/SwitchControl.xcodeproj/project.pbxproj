@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		917A22651DAD3131009F9060 /* SwitchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22641DAD3131009F9060 /* SwitchControl.swift */; };
 		917A22671DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */; };
-		917A22691DAD3B8E009F9060 /* XCTAssert+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22681DAD3B8E009F9060 /* XCTAssert+Type.swift */; };
 		917A226C1DAE7C83009F9060 /* SwitchControlLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A226B1DAE7C83009F9060 /* SwitchControlLabelTests.swift */; };
 		917A226E1DAE7D5E009F9060 /* SwitchControlLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A226D1DAE7D5E009F9060 /* SwitchControlLabel.swift */; };
 		917A22711DAE8D6C009F9060 /* NSCoder+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22701DAE8D6C009F9060 /* NSCoder+Empty.swift */; };
@@ -31,7 +30,6 @@
 /* Begin PBXFileReference section */
 		917A22641DAD3131009F9060 /* SwitchControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchControl.swift; sourceTree = "<group>"; };
 		917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTAssert+LayoutConstraint.swift"; sourceTree = "<group>"; };
-		917A22681DAD3B8E009F9060 /* XCTAssert+Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTAssert+Type.swift"; sourceTree = "<group>"; };
 		917A226B1DAE7C83009F9060 /* SwitchControlLabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchControlLabelTests.swift; sourceTree = "<group>"; };
 		917A226D1DAE7D5E009F9060 /* SwitchControlLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchControlLabel.swift; sourceTree = "<group>"; };
 		917A22701DAE8D6C009F9060 /* NSCoder+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoder+Empty.swift"; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 				9187499B1DAD2F1C00F2F507 /* SwitchControlTests.swift */,
 				917A226B1DAE7C83009F9060 /* SwitchControlLabelTests.swift */,
 				917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */,
-				917A22681DAD3B8E009F9060 /* XCTAssert+Type.swift */,
 				917A22701DAE8D6C009F9060 /* NSCoder+Empty.swift */,
 				9187499D1DAD2F1C00F2F507 /* Info.plist */,
 			);
@@ -227,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				917A22711DAE8D6C009F9060 /* NSCoder+Empty.swift in Sources */,
-				917A22691DAD3B8E009F9060 /* XCTAssert+Type.swift in Sources */,
 				917A22671DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift in Sources */,
 				917A226C1DAE7C83009F9060 /* SwitchControlLabelTests.swift in Sources */,
 				9187499C1DAD2F1C00F2F507 /* SwitchControlTests.swift in Sources */,

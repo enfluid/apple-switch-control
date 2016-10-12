@@ -28,7 +28,7 @@ class SwitchControlTests: XCTestCase {
     // MARK: Labels
 
     func testLabelsType() {
-        XCTAssertType((SwitchControlLabel, SwitchControlLabel).self, of: switchControl.labels)
+        XCTAssert(switchControl.labels as Any is (SwitchControlLabel, SwitchControlLabel))
     }
 
     // MARK: Top label
@@ -87,7 +87,7 @@ class SwitchControlTests: XCTestCase {
     // MARK: Stack view
 
     func testStackViewType() {
-        XCTAssertType(UIStackView.self, of: switchControl.stackView)
+        XCTAssert(switchControl.stackView as Any is UIStackView)
     }
 
     func testStackViewArrangedSubviews() {
@@ -123,7 +123,7 @@ class SwitchControlTests: XCTestCase {
     }
 
     func testSelectedSegmentType() {
-        XCTAssertType(SwitchControl.SelectedSegment.self, of: switchControl.selectedSegment)
+        XCTAssert(switchControl.selectedSegment as Any is SwitchControl.SelectedSegment)
     }
 
     func testSelectedSegmentDefault() {
