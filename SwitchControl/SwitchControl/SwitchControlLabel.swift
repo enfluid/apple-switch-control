@@ -8,4 +8,11 @@ final class SwitchControlLabel: UILabel {
         }
     }
 
+    override func tintColorDidChange() {
+        super.tintColorDidChange()
+        if isSelected {
+            backgroundColor = tintColor
+        }
+    }
+
 }

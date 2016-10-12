@@ -37,4 +37,25 @@ class SwitchControlLabelTests: XCTestCase {
         XCTAssertNil(switchControlLabel.backgroundColor)
     }
 
+    func testBackgroundColorWhenTintColorDidChange1() {
+        switchControlLabel.isSelected = true
+        let tintColor: UIColor = .red
+        switchControlLabel.tintColor = tintColor
+        XCTAssertEqual(switchControlLabel.backgroundColor, tintColor)
+    }
+
+    func testBackgroundColorWhenTintColorDidChange2() {
+        switchControlLabel.isSelected = true
+        let tintColor: UIColor = .green
+        switchControlLabel.tintColor = tintColor
+        XCTAssertEqual(switchControlLabel.backgroundColor, tintColor)
+    }
+
+    func testBackgroundColorWhenTintColorDidChange3() {
+        let backgroundColor: UIColor = .red
+        switchControlLabel.backgroundColor = backgroundColor
+        switchControlLabel.tintColor = .green
+        XCTAssertEqual(switchControlLabel.backgroundColor, backgroundColor)
+    }
+
 }
