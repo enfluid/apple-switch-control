@@ -9,14 +9,8 @@ public class SwitchControl: UIControl {
 
     var selectedSegment: SelectedSegment = .top {
         didSet {
-            switch selectedSegment {
-            case .top:
-                labels.top.isSelected = true
-                labels.bottom.isSelected = false
-            case .bottom:
-                labels.top.isSelected = false
-                labels.bottom.isSelected = true
-            }
+            selectDeselectLabels()
+            accessibilityValue = selectedLabel.text
         }
     }
 
@@ -33,14 +27,33 @@ public class SwitchControl: UIControl {
         labels.top.text = topTitle
         labels.bottom.text = bottomTitle
         addTarget(self, action: #selector(SwitchControl.didTouchUpInside), for: .touchUpInside)
+        accessibilityTraits = UIAccessibilityTraitButton
+        accessibilityValue = selectedLabel.text
     }
 
     @IBAction func didTouchUpInside() {
         switch selectedSegment {
-        case .top:
-            selectedSegment = .bottom
-        case .bottom:
-            selectedSegment = .top
+        case .top: selectedSegment = .bottom
+        case .bottom: selectedSegment = .top
+        }
+    }
+
+    private func selectDeselectLabels() {
+        selectedLabel.isSelected = true
+        deselectedLabel.isSelected = false
+    }
+
+    private var selectedLabel: SwitchControlLabel {
+        switch selectedSegment {
+        case .top: return labels.top
+        case .bottom: return labels.bottom
+        }
+    }
+
+    private var deselectedLabel: SwitchControlLabel {
+        switch selectedSegment {
+        case .top: return labels.bottom
+        case .bottom: return labels.top
         }
     }
 
