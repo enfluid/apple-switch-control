@@ -2,12 +2,7 @@ import UIKit
 
 final class SwitchControlLabel: UILabel {
 
-    var isSelected = false {
-        didSet {
-            backgroundColor = isSelected ? tintColor : nil
-            textColor = isSelected ? .white : tintColor
-        }
-    }
+    // MARK: Initialization
 
     init() {
         super.init(frame: .zero)
@@ -18,6 +13,17 @@ final class SwitchControlLabel: UILabel {
     required init?(coder: NSCoder) {
         return nil
     }
+
+    // MARK: Selection
+
+    var isSelected = false {
+        didSet {
+            backgroundColor = isSelected ? tintColor : nil
+            textColor = isSelected ? .white : tintColor
+        }
+    }
+
+    // MARK: Tint color
 
     override func tintColorDidChange() {
         super.tintColorDidChange()
