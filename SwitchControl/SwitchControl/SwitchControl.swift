@@ -79,6 +79,15 @@ public class SwitchControl: UIControl {
         }
     }
 
+    // MARK: Font
+
+    var font = SwitchControlLabel.preferredFont {
+        didSet {
+            topLabel.font = font
+            bottomLabel.font = font
+        }
+    }
+
     // MARK: Highlighting
 
     public override var isHighlighted: Bool {

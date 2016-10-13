@@ -25,10 +25,30 @@ class SwitchControlTests: XCTestCase {
         XCTAssertEqual(switchControl.subviews, [switchControl.stackView])
     }
 
+    func testFontType() {
+        XCTAssert(switchControl.font as Any is UIFont)
+    }
+
+    func testFontDefault() {
+        XCTAssertEqual(switchControl.font, SwitchControlLabel.preferredFont)
+    }
+
     // MARK: Top label
 
     func testTopLabelType() {
         XCTAssert(switchControl.topLabel as Any is SwitchControlLabel)
+    }
+
+    func testTopLabelFont1() {
+        let font: UIFont = .systemFont(ofSize: 1)
+        switchControl.font = font
+        XCTAssertEqual(switchControl.topLabel.font, font)
+    }
+
+    func testTopLabelFont2() {
+        let font: UIFont = .systemFont(ofSize: 2)
+        switchControl.font = font
+        XCTAssertEqual(switchControl.topLabel.font, font)
     }
 
     func testTopLabelText1() {
@@ -58,6 +78,18 @@ class SwitchControlTests: XCTestCase {
     }
 
     // MARK: Bottom label
+
+    func testBottomLabelFont1() {
+        let font: UIFont = .systemFont(ofSize: 1)
+        switchControl.font = font
+        XCTAssertEqual(switchControl.bottomLabel.font, font)
+    }
+
+    func testBottomLabelFont2() {
+        let font: UIFont = .systemFont(ofSize: 2)
+        switchControl.font = font
+        XCTAssertEqual(switchControl.bottomLabel.font, font)
+    }
 
     func testBottomLabelType() {
         XCTAssert(switchControl.bottomLabel as Any is SwitchControlLabel)
@@ -216,4 +248,5 @@ class SwitchControlTests: XCTestCase {
         let expectedHint = NSLocalizedString("Double tap to toggle", comment: "")
         XCTAssertEqual(switchControl.accessibilityHint, expectedHint)
     }
+
 }
