@@ -33,8 +33,8 @@ public class SwitchControl: UIControl {
 
     private func initStackView() {
         addSubview(stackView)
-        stackView.addArrangedSubview(labels.top)
-        stackView.addArrangedSubview(labels.bottom)
+        stackView.addArrangedSubview(topLabel)
+        stackView.addArrangedSubview(bottomLabel)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         NSLayoutConstraint.activate(stackViewConstraints)
@@ -51,12 +51,13 @@ public class SwitchControl: UIControl {
 
     // MARK: Labels
 
-    let labels = (top: SwitchControlLabel(), bottom: SwitchControlLabel())
+    let topLabel = SwitchControlLabel()
+    let bottomLabel = SwitchControlLabel()
 
     private func initLabels(topTitle: String, bottomTitle: String) {
-        labels.top.isSelected = true
-        labels.top.text = topTitle
-        labels.bottom.text = bottomTitle
+        topLabel.isSelected = true
+        topLabel.text = topTitle
+        bottomLabel.text = bottomTitle
     }
 
     private func selectDeselectLabels() {
@@ -66,15 +67,15 @@ public class SwitchControl: UIControl {
 
     private var selectedLabel: SwitchControlLabel {
         switch selectedSegment {
-        case .top: return labels.top
-        case .bottom: return labels.bottom
+        case .top: return topLabel
+        case .bottom: return bottomLabel
         }
     }
 
     private var deselectedLabel: SwitchControlLabel {
         switch selectedSegment {
-        case .top: return labels.bottom
-        case .bottom: return labels.top
+        case .top: return bottomLabel
+        case .bottom: return topLabel
         }
     }
 
