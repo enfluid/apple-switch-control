@@ -4,7 +4,7 @@ public class SwitchControl: UIControl {
 
     // MARK: Initialization
 
-    init(topTitle: String, bottomTitle: String) {
+    public init(topTitle: String, bottomTitle: String) {
         super.init(frame: .zero)
         initStackView()
         initLabels(topTitle: topTitle, bottomTitle: bottomTitle)
@@ -18,9 +18,9 @@ public class SwitchControl: UIControl {
 
     // MARK: Selected segment
 
-    enum SelectedSegment { case top, bottom }
+    public enum SelectedSegment { case top, bottom }
 
-    var selectedSegment: SelectedSegment = .top {
+    public var selectedSegment: SelectedSegment = .top {
         didSet {
             selectDeselectLabels()
             updateAccessibilityValue()
@@ -81,7 +81,7 @@ public class SwitchControl: UIControl {
 
     // MARK: Font
 
-    var font = SwitchControlLabel.preferredFont {
+    public var font = SwitchControlLabel.preferredFont {
         didSet {
             topLabel.font = font
             bottomLabel.font = font
