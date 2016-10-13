@@ -210,4 +210,8 @@ class SwitchControlTests: XCTestCase {
         XCTAssertEqual(switchControl.accessibilityValue, topTitle)
     }
 
+    func testAccessibilityHint() {
+        let expectedHint = NSLocalizedString("Double tap to toggle", comment: "")
+        XCTAssertEqual(switchControl.accessibilityHint, expectedHint)
+    }
 }
