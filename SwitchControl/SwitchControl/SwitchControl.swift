@@ -20,12 +20,28 @@ public class SwitchControl: UIControl {
         }
     }
 
+    public override var isHighlighted: Bool {
+        didSet {
+            stackView.alpha = isHighlighted ? 0.5 : 1
+        }
+    }
+
     init(topTitle: String, bottomTitle: String) {
         super.init(frame: .zero)
         configureStackView()
         labels.top.isSelected = true
         labels.top.text = topTitle
         labels.bottom.text = bottomTitle
+        addTarget(self, action: #selector(SwitchControl.didTouchUpInside), for: .touchUpInside)
+    }
+
+    @IBAction func didTouchUpInside() {
+        switch selectedSegment {
+        case .top:
+            selectedSegment = .bottom
+        case .bottom:
+            selectedSegment = .top
+        }
     }
 
     private func configureStackView() {
