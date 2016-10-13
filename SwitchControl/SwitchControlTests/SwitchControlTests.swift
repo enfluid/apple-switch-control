@@ -25,63 +25,65 @@ class SwitchControlTests: XCTestCase {
         XCTAssertEqual(switchControl.subviews, [switchControl.stackView])
     }
 
-    // MARK: Labels
-
-    func testLabelsType() {
-        XCTAssert(switchControl.labels as Any is (SwitchControlLabel, SwitchControlLabel))
-    }
-
     // MARK: Top label
+
+    func testTopLabelType() {
+        XCTAssert(switchControl.topLabel as Any is SwitchControlLabel)
+    }
 
     func testTopLabelText1() {
         let topTitle = "A"
         let switchControl = SwitchControl(topTitle: topTitle, bottomTitle: "")
-        XCTAssertEqual(switchControl.labels.top.text, topTitle)
+        XCTAssertEqual(switchControl.topLabel.text, topTitle)
     }
 
     func testTopLabelText2() {
         let topTitle = "B"
         let switchControl = SwitchControl(topTitle: topTitle, bottomTitle: "")
-        XCTAssertEqual(switchControl.labels.top.text, topTitle)
+        XCTAssertEqual(switchControl.topLabel.text, topTitle)
     }
 
     func testTopLabelSelectedDefault() {
-        XCTAssert(switchControl.labels.top.isSelected)
+        XCTAssert(switchControl.topLabel.isSelected)
     }
 
     func testTopLabelSelectedForSelectedSegment1() {
         switchControl.selectedSegment = .bottom
-        XCTAssertFalse(switchControl.labels.top.isSelected)
+        XCTAssertFalse(switchControl.topLabel.isSelected)
     }
 
     func testTopLabelSelectedForSelectedSegment2() {
         switchControl.selectedSegment = .top
-        XCTAssert(switchControl.labels.top.isSelected)
+        XCTAssert(switchControl.topLabel.isSelected)
     }
 
     // MARK: Bottom label
 
+    func testBottomLabelType() {
+        XCTAssert(switchControl.bottomLabel as Any is SwitchControlLabel)
+    }
+
     func testBottomLabelText1() {
         let bottomTitle = "A"
         let switchControl = SwitchControl(topTitle: "", bottomTitle: bottomTitle)
-        XCTAssertEqual(switchControl.labels.bottom.text, bottomTitle)
+        XCTAssertEqual(switchControl.bottomLabel.text, bottomTitle)
     }
 
     func testBottomLabelText2() {
         let bottomTitle = "B"
         let switchControl = SwitchControl(topTitle: "", bottomTitle: bottomTitle)
-        XCTAssertEqual(switchControl.labels.bottom.text, bottomTitle)
+        XCTAssertEqual(switchControl.bottomLabel.text, bottomTitle)
     }
 
     func testBottomLabelForSelectedSegment1() {
-        switchControl.labels.bottom.isSelected = true
+        switchControl.bottomLabel.isSelected = true
         switchControl.selectedSegment = .top
-        XCTAssertFalse(switchControl.labels.bottom.isSelected)
+        XCTAssertFalse(switchControl.bottomLabel.isSelected)
     }
 
     func testBottomLabelForSelectedSegment2() {
         switchControl.selectedSegment = .bottom
-        XCTAssert(switchControl.labels.bottom.isSelected)
+        XCTAssert(switchControl.bottomLabel.isSelected)
     }
 
     // MARK: Stack view
@@ -91,7 +93,7 @@ class SwitchControlTests: XCTestCase {
     }
 
     func testStackViewArrangedSubviews() {
-        XCTAssertEqual(switchControl.stackView.arrangedSubviews, [switchControl.labels.top, switchControl.labels.bottom])
+        XCTAssertEqual(switchControl.stackView.arrangedSubviews, [switchControl.topLabel, switchControl.bottomLabel])
     }
 
     func testStackViewIgnoreAutoresizingMask() {

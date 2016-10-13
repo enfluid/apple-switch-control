@@ -16,10 +16,6 @@ class SwitchControlLabelTests: XCTestCase {
         XCTAssertNil(switchControlLabel)
     }
 
-    func testSelectedType() {
-        XCTAssert(switchControlLabel.isSelected as Any is Bool)
-    }
-
     func testFrame() {
         XCTAssertEqual(switchControlLabel.frame, .zero)
     }
@@ -29,6 +25,10 @@ class SwitchControlLabelTests: XCTestCase {
     }
 
     // MARK: Selected
+
+    func testSelectedType() {
+        XCTAssert(switchControlLabel.isSelected as Any is Bool)
+    }
 
     func testSelectedDefault() {
         XCTAssertFalse(switchControlLabel.isSelected)
