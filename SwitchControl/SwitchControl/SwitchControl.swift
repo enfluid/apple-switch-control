@@ -20,6 +20,12 @@ public class SwitchControl: UIControl {
         }
     }
 
+    public override var isHighlighted: Bool {
+        didSet {
+            stackView.alpha = isHighlighted ? 0.5 : 1
+        }
+    }
+
     init(topTitle: String, bottomTitle: String) {
         super.init(frame: .zero)
         configureStackView()
