@@ -8,6 +8,7 @@ final class SwitchControlLabel: UILabel {
         super.init(frame: .zero)
         layer.cornerRadius = 4
         textColor = tintColor
+        font = SwitchControlLabel.preferredFont
     }
     
     required init?(coder: NSCoder) {
@@ -33,5 +34,9 @@ final class SwitchControlLabel: UILabel {
             textColor = tintColor
         }
     }
+
+    // MARK: Preferred font
+
+    static let preferredFont: UIFont = .systemFont(ofSize: 15)
 
 }
