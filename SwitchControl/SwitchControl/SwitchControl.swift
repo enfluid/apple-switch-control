@@ -2,23 +2,83 @@ import UIKit
 
 public class SwitchControl: UIControl {
 
-    enum SelectedSegment { case top, bottom }
+    // MARK: Initialization
 
-    let labels = (top: SwitchControlLabel(), bottom: SwitchControlLabel())
-    let stackView = UIStackView()
+    init(topTitle: String, bottomTitle: String) {
+        super.init(frame: .zero)
+        initStackView()
+        initLabels(topTitle: topTitle, bottomTitle: bottomTitle)
+        initTouchHandling()
+        initAccessibility()
+    }
+
+    required public init?(coder: NSCoder) {
+        return nil
+    }
+
+    // MARK: Selected segment
+
+    enum SelectedSegment { case top, bottom }
 
     var selectedSegment: SelectedSegment = .top {
         didSet {
-            switch selectedSegment {
-            case .top:
-                labels.top.isSelected = true
-                labels.bottom.isSelected = false
-            case .bottom:
-                labels.top.isSelected = false
-                labels.bottom.isSelected = true
-            }
+            selectDeselectLabels()
+            updateAccessibilityValue()
         }
     }
+
+    // MARK: Stack view
+
+    let stackView = UIStackView()
+
+    private func initStackView() {
+        addSubview(stackView)
+        stackView.addArrangedSubview(labels.top)
+        stackView.addArrangedSubview(labels.bottom)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        NSLayoutConstraint.activate(stackViewConstraints)
+    }
+
+    private var stackViewConstraints: [NSLayoutConstraint] {
+        return [
+            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ]
+    }
+
+    // MARK: Labels
+
+    let labels = (top: SwitchControlLabel(), bottom: SwitchControlLabel())
+
+    private func initLabels(topTitle: String, bottomTitle: String) {
+        labels.top.isSelected = true
+        labels.top.text = topTitle
+        labels.bottom.text = bottomTitle
+    }
+
+    private func selectDeselectLabels() {
+        selectedLabel.isSelected = true
+        deselectedLabel.isSelected = false
+    }
+
+    private var selectedLabel: SwitchControlLabel {
+        switch selectedSegment {
+        case .top: return labels.top
+        case .bottom: return labels.bottom
+        }
+    }
+
+    private var deselectedLabel: SwitchControlLabel {
+        switch selectedSegment {
+        case .top: return labels.bottom
+        case .bottom: return labels.top
+        }
+    }
+
+    // MARK: Highlighting
 
     public override var isHighlighted: Bool {
         didSet {
@@ -26,41 +86,29 @@ public class SwitchControl: UIControl {
         }
     }
 
-    init(topTitle: String, bottomTitle: String) {
-        super.init(frame: .zero)
-        configureStackView()
-        labels.top.isSelected = true
-        labels.top.text = topTitle
-        labels.bottom.text = bottomTitle
+    // MARK: Touch interaction
+
+    func initTouchHandling() {
         addTarget(self, action: #selector(SwitchControl.didTouchUpInside), for: .touchUpInside)
     }
 
     @IBAction func didTouchUpInside() {
         switch selectedSegment {
-        case .top:
-            selectedSegment = .bottom
-        case .bottom:
-            selectedSegment = .top
+        case .top: selectedSegment = .bottom
+        case .bottom: selectedSegment = .top
         }
     }
 
-    private func configureStackView() {
-        addSubview(stackView)
-        stackView.addArrangedSubview(labels.top)
-        stackView.addArrangedSubview(labels.bottom)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        let constraints = [
-            stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ]
-        NSLayoutConstraint.activate(constraints)
+    // MARK: Accessibility
+
+    private func initAccessibility() {
+        accessibilityTraits = UIAccessibilityTraitButton
+        updateAccessibilityValue()
+        accessibilityHint = NSLocalizedString("Double tap to toggle", comment: "")
     }
-    
-    required public init?(coder: NSCoder) {
-        return nil
+
+    private func updateAccessibilityValue() {
+        accessibilityValue = selectedLabel.text
     }
 
 }
