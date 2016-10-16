@@ -69,7 +69,7 @@ class SwitchControlLabelTests: XCTestCase {
     func testDeselectedBackgroundColor() {
         switchControlLabel.backgroundColor = .red
         switchControlLabel.isSelected = false
-        XCTAssertNil(switchControlLabel.backgroundColor)
+        XCTAssertEqual(switchControlLabel.backgroundColor, .white)
     }
 
     func testDeselectedBackgroundColorWhenTintColorDidChange() {
