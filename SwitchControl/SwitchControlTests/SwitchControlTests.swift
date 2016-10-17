@@ -132,6 +132,10 @@ class SwitchControlTests: XCTestCase {
         XCTAssertFalse(switchControl.stackView.translatesAutoresizingMaskIntoConstraints)
     }
 
+    func testStackViewIgnoreUserInteraction() {
+        XCTAssertFalse(switchControl.stackView.isUserInteractionEnabled)
+    }
+
     func testStackViewAxis() {
         XCTAssertEqual(switchControl.stackView.axis, .vertical)
     }

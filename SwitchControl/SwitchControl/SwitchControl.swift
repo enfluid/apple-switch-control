@@ -37,6 +37,7 @@ public class SwitchControl: UIControl {
         stackView.addArrangedSubview(bottomLabel)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
+        stackView.isUserInteractionEnabled = false
         NSLayoutConstraint.activate(stackViewConstraints)
     }
 

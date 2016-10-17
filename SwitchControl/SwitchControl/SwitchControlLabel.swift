@@ -6,8 +6,10 @@ final class SwitchControlLabel: UILabel {
 
     init() {
         super.init(frame: .zero)
+        layer.masksToBounds = true
         layer.cornerRadius = 4
         textColor = tintColor
+        textAlignment = .center
         font = SwitchControlLabel.preferredFont
     }
     
