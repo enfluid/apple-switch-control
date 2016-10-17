@@ -20,6 +20,10 @@ class SwitchControlLabelTests: XCTestCase {
         XCTAssertEqual(switchControlLabel.frame, .zero)
     }
 
+    func testTextAlignment() {
+        XCTAssertEqual(switchControlLabel.textAlignment, .center)
+    }
+
     func testLayerMasksToBounds() {
         XCTAssert(switchControlLabel.layer.masksToBounds)
     }
