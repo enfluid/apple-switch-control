@@ -20,6 +20,10 @@ class SwitchControlLabelTests: XCTestCase {
         XCTAssertEqual(switchControlLabel.frame, .zero)
     }
 
+    func testLayerMasksToBounds() {
+        XCTAssert(switchControlLabel.layer.masksToBounds)
+    }
+
     func testLayerCornerRadius() {
         XCTAssertEqual(switchControlLabel.layer.cornerRadius, 4)
     }
