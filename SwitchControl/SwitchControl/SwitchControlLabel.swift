@@ -21,7 +21,7 @@ final class SwitchControlLabel: UILabel {
 
     var isSelected = false {
         didSet {
-            backgroundColor = isSelected ? tintColor : nil
+            backgroundColor = isSelected ? tintColor : .clear
             textColor = isSelected ? .white : tintColor
         }
     }
