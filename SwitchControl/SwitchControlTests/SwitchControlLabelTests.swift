@@ -8,7 +8,7 @@ class SwitchControlLabelTests: XCTestCase {
     // MARK: Main
 
     func testSuperclass() {
-        XCTAssert(switchControlLabel as Any is UILabel)
+        XCTAssertTrue(switchControlLabel as Any is UILabel)
     }
 
     func testUnarchiving() {
@@ -25,7 +25,7 @@ class SwitchControlLabelTests: XCTestCase {
     }
 
     func testLayerMasksToBounds() {
-        XCTAssert(switchControlLabel.layer.masksToBounds)
+        XCTAssertTrue(switchControlLabel.layer.masksToBounds)
     }
 
     func testLayerCornerRadius() {
@@ -35,7 +35,7 @@ class SwitchControlLabelTests: XCTestCase {
     // MARK: Selected
 
     func testSelectedType() {
-        XCTAssert(switchControlLabel.isSelected as Any is Bool)
+        XCTAssertTrue(switchControlLabel.isSelected as Any is Bool)
     }
 
     func testSelectedDefault() {

@@ -9,7 +9,7 @@ class SwitchControlTests: XCTestCase {
 
     func testSuperclass() {
         // TODO: Use XCTAssertSuperclass
-        XCTAssert(switchControl as Any is UIControl)
+        XCTAssertTrue(switchControl as Any is UIControl)
     }
 
     func testUnarchiving() {
@@ -26,7 +26,7 @@ class SwitchControlTests: XCTestCase {
     }
 
     func testFontType() {
-        XCTAssert(switchControl.font as Any is UIFont)
+        XCTAssertTrue(switchControl.font as Any is UIFont)
     }
 
     func testFontDefault() {
@@ -36,7 +36,7 @@ class SwitchControlTests: XCTestCase {
     // MARK: Top label
 
     func testTopLabelType() {
-        XCTAssert(switchControl.topLabel as Any is SwitchControlLabel)
+        XCTAssertTrue(switchControl.topLabel as Any is SwitchControlLabel)
     }
 
     func testTopLabelFont1() {
@@ -64,7 +64,7 @@ class SwitchControlTests: XCTestCase {
     }
 
     func testTopLabelSelectedDefault() {
-        XCTAssert(switchControl.topLabel.isSelected)
+        XCTAssertTrue(switchControl.topLabel.isSelected)
     }
 
     func testTopLabelSelectedForSelectedSegment1() {
@@ -74,7 +74,7 @@ class SwitchControlTests: XCTestCase {
 
     func testTopLabelSelectedForSelectedSegment2() {
         switchControl.selectedSegment = .top
-        XCTAssert(switchControl.topLabel.isSelected)
+        XCTAssertTrue(switchControl.topLabel.isSelected)
     }
 
     // MARK: Bottom label
@@ -92,7 +92,7 @@ class SwitchControlTests: XCTestCase {
     }
 
     func testBottomLabelType() {
-        XCTAssert(switchControl.bottomLabel as Any is SwitchControlLabel)
+        XCTAssertTrue(switchControl.bottomLabel as Any is SwitchControlLabel)
     }
 
     func testBottomLabelText1() {
@@ -115,13 +115,13 @@ class SwitchControlTests: XCTestCase {
 
     func testBottomLabelForSelectedSegment2() {
         switchControl.selectedSegment = .bottom
-        XCTAssert(switchControl.bottomLabel.isSelected)
+        XCTAssertTrue(switchControl.bottomLabel.isSelected)
     }
 
     // MARK: Stack view
 
     func testStackViewType() {
-        XCTAssert(switchControl.stackView as Any is UIStackView)
+        XCTAssertTrue(switchControl.stackView as Any is UIStackView)
     }
 
     func testStackViewArrangedSubviews() {
@@ -161,7 +161,7 @@ class SwitchControlTests: XCTestCase {
     }
 
     func testSelectedSegmentType() {
-        XCTAssert(switchControl.selectedSegment as Any is SwitchControl.SelectedSegment)
+        XCTAssertTrue(switchControl.selectedSegment as Any is SwitchControl.SelectedSegment)
     }
 
     func testSelectedSegmentDefault() {
