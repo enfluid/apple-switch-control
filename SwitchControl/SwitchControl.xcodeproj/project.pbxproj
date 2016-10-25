@@ -119,6 +119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 918749A11DAD2F1C00F2F507 /* Build configuration list for PBXNativeTarget "SwitchControl" */;
 			buildPhases = (
+				0F32BF301DBEF27D0098EE38 /* Run SwiftLint */,
 				918749881DAD2F1B00F2F507 /* Sources */,
 				918749891DAD2F1B00F2F507 /* Frameworks */,
 				9187498A1DAD2F1B00F2F507 /* Headers */,
@@ -208,6 +209,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F32BF301DBEF27D0098EE38 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint lint --strict";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		918749881DAD2F1B00F2F507 /* Sources */ = {
