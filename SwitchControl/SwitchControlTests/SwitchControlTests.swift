@@ -8,7 +8,6 @@ class SwitchControlTests: XCTestCase {
     // MARK: Main
 
     func testSuperclass() {
-        // TODO: Use XCTAssertSuperclass
         XCTAssertTrue(switchControl as Any is UIControl)
     }
 
