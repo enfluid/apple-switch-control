@@ -8,5 +8,5 @@ extension NSCoder {
         archiver.finishEncoding()
         return NSKeyedUnarchiver(forReadingWith: data as Data)
     }
-    
+
 }

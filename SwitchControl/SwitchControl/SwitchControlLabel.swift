@@ -12,7 +12,7 @@ final class SwitchControlLabel: UILabel {
         textAlignment = .center
         font = SwitchControlLabel.preferredFont
     }
-    
+
     required init?(coder: NSCoder) {
         return nil
     }

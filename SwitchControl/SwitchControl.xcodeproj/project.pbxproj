@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0552371DC0405000F978D9 /* SwitchControlTests+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0552361DC0405000F978D9 /* SwitchControlTests+Labels.swift */; };
+		0F0552391DC040C400F978D9 /* SwitchControlTests+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0552381DC040C400F978D9 /* SwitchControlTests+StackView.swift */; };
+		0F05523B1DC0414900F978D9 /* SwitchControlTests+TouchInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05523A1DC0414900F978D9 /* SwitchControlTests+TouchInteraction.swift */; };
+		0F05523D1DC041D600F978D9 /* SwitchControlTests+Highlighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05523C1DC041D600F978D9 /* SwitchControlTests+Highlighting.swift */; };
+		0F05523F1DC0421D00F978D9 /* SwitchControlTests+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05523E1DC0421D00F978D9 /* SwitchControlTests+Accessibility.swift */; };
+		0F0552411DC0436300F978D9 /* SwitchControlLabelTests+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0552401DC0436300F978D9 /* SwitchControlLabelTests+BackgroundColor.swift */; };
+		0F0552431DC043E900F978D9 /* SwitchControlLabelTests+TextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0552421DC043E900F978D9 /* SwitchControlLabelTests+TextColor.swift */; };
+		0F0552451DC0445800F978D9 /* SwitchControlLabelTests+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0552441DC0445800F978D9 /* SwitchControlLabelTests+Font.swift */; };
 		917A22651DAD3131009F9060 /* SwitchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22641DAD3131009F9060 /* SwitchControl.swift */; };
 		917A22671DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */; };
 		917A226C1DAE7C83009F9060 /* SwitchControlLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A226B1DAE7C83009F9060 /* SwitchControlLabelTests.swift */; };
@@ -28,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F0552361DC0405000F978D9 /* SwitchControlTests+Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwitchControlTests+Labels.swift"; sourceTree = "<group>"; };
+		0F0552381DC040C400F978D9 /* SwitchControlTests+StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwitchControlTests+StackView.swift"; sourceTree = "<group>"; };
+		0F05523A1DC0414900F978D9 /* SwitchControlTests+TouchInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwitchControlTests+TouchInteraction.swift"; sourceTree = "<group>"; };
+		0F05523C1DC041D600F978D9 /* SwitchControlTests+Highlighting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwitchControlTests+Highlighting.swift"; sourceTree = "<group>"; };
+		0F05523E1DC0421D00F978D9 /* SwitchControlTests+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwitchControlTests+Accessibility.swift"; sourceTree = "<group>"; };
+		0F0552401DC0436300F978D9 /* SwitchControlLabelTests+BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwitchControlLabelTests+BackgroundColor.swift"; sourceTree = "<group>"; };
+		0F0552421DC043E900F978D9 /* SwitchControlLabelTests+TextColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwitchControlLabelTests+TextColor.swift"; sourceTree = "<group>"; };
+		0F0552441DC0445800F978D9 /* SwitchControlLabelTests+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwitchControlLabelTests+Font.swift"; sourceTree = "<group>"; };
 		917A22641DAD3131009F9060 /* SwitchControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchControl.swift; sourceTree = "<group>"; };
 		917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTAssert+LayoutConstraint.swift"; sourceTree = "<group>"; };
 		917A226B1DAE7C83009F9060 /* SwitchControlLabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchControlLabelTests.swift; sourceTree = "<group>"; };
@@ -93,7 +109,15 @@
 			isa = PBXGroup;
 			children = (
 				9187499B1DAD2F1C00F2F507 /* SwitchControlTests.swift */,
+				0F0552361DC0405000F978D9 /* SwitchControlTests+Labels.swift */,
+				0F0552381DC040C400F978D9 /* SwitchControlTests+StackView.swift */,
+				0F05523A1DC0414900F978D9 /* SwitchControlTests+TouchInteraction.swift */,
+				0F05523C1DC041D600F978D9 /* SwitchControlTests+Highlighting.swift */,
+				0F05523E1DC0421D00F978D9 /* SwitchControlTests+Accessibility.swift */,
 				917A226B1DAE7C83009F9060 /* SwitchControlLabelTests.swift */,
+				0F0552401DC0436300F978D9 /* SwitchControlLabelTests+BackgroundColor.swift */,
+				0F0552421DC043E900F978D9 /* SwitchControlLabelTests+TextColor.swift */,
+				0F0552441DC0445800F978D9 /* SwitchControlLabelTests+Font.swift */,
 				917A22661DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift */,
 				917A22701DAE8D6C009F9060 /* NSCoder+Empty.swift */,
 				9187499D1DAD2F1C00F2F507 /* Info.plist */,
@@ -119,6 +143,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 918749A11DAD2F1C00F2F507 /* Build configuration list for PBXNativeTarget "SwitchControl" */;
 			buildPhases = (
+				0F32BF301DBEF27D0098EE38 /* Run SwiftLint */,
 				918749881DAD2F1B00F2F507 /* Sources */,
 				918749891DAD2F1B00F2F507 /* Frameworks */,
 				9187498A1DAD2F1B00F2F507 /* Headers */,
@@ -209,6 +234,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F32BF301DBEF27D0098EE38 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint lint --strict";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		918749881DAD2F1B00F2F507 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -224,9 +267,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				917A22711DAE8D6C009F9060 /* NSCoder+Empty.swift in Sources */,
+				0F0552431DC043E900F978D9 /* SwitchControlLabelTests+TextColor.swift in Sources */,
+				0F0552371DC0405000F978D9 /* SwitchControlTests+Labels.swift in Sources */,
+				0F0552411DC0436300F978D9 /* SwitchControlLabelTests+BackgroundColor.swift in Sources */,
+				0F05523F1DC0421D00F978D9 /* SwitchControlTests+Accessibility.swift in Sources */,
+				0F05523B1DC0414900F978D9 /* SwitchControlTests+TouchInteraction.swift in Sources */,
 				917A22671DAD36D2009F9060 /* XCTAssert+LayoutConstraint.swift in Sources */,
+				0F0552391DC040C400F978D9 /* SwitchControlTests+StackView.swift in Sources */,
 				917A226C1DAE7C83009F9060 /* SwitchControlLabelTests.swift in Sources */,
+				0F0552451DC0445800F978D9 /* SwitchControlLabelTests+Font.swift in Sources */,
 				9187499C1DAD2F1C00F2F507 /* SwitchControlTests.swift in Sources */,
+				0F05523D1DC041D600F978D9 /* SwitchControlTests+Highlighting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
