@@ -113,6 +113,7 @@ public class SwitchControl: UIControl {
     // MARK: Accessibility
 
     private func initAccessibility() {
+        isAccessibilityElement = true
         accessibilityTraits = UIAccessibilityTraitButton
         updateAccessibilityValue()
         accessibilityHint = NSLocalizedString("Double tap to toggle", comment: "")
