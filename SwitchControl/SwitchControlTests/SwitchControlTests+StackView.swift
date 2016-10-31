@@ -3,8 +3,6 @@ import XCTest
 
 extension SwitchControlTests {
 
-    // MARK: Stack view
-
     func testStackViewType() {
         XCTAssertTrue(switchControl.stackView as Any is UIStackView)
     }

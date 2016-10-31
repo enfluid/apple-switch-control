@@ -3,8 +3,6 @@ import XCTest
 
 extension SwitchControlLabelTests {
 
-    // MARK: Font
-
     func testPreferredFont() {
         let expectedFont: UIFont = .systemFont(ofSize: 15)
         XCTAssertEqual(SwitchControlLabel.preferredFont, expectedFont)

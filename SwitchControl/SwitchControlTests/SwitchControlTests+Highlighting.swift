@@ -3,8 +3,6 @@ import XCTest
 
 extension SwitchControlTests {
 
-    // MARK: Highlighting
-
     func testHighlighted1() {
         switchControl.isHighlighted = true
         XCTAssertEqual(switchControl.stackView.alpha, 0.5)
