@@ -3,8 +3,6 @@ import XCTest
 
 extension SwitchControlTests {
 
-    // MARK: Touch interaction
-
     func testTouchTarget() {
         let actions = switchControl.actions(forTarget: switchControl, forControlEvent: .touchUpInside) ?? []
         let expectedAction = String(describing: #selector(SwitchControl.didTouchUpInside))

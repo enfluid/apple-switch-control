@@ -3,8 +3,6 @@ import XCTest
 
 extension SwitchControlTests {
 
-    // MARK: Accessibility
-
     func testIsAccessibilityElement() {
         XCTAssertTrue(switchControl.isAccessibilityElement)
     }
