@@ -1,36 +1,35 @@
-//
-//  SwitchControlTests.swift
-//  SwitchControlTests
-//
-//  Created by Rudolf Adamkovic on 11.10.2016.
-//  Copyright © 2016 TBD. All rights reserved.
-//
-
 import XCTest
 @testable import SwitchControl
 
 class SwitchControlTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+    lazy var switchControl = SwitchControl(topTitle: "A", bottomTitle: "B")
+
+    // MARK: Main
+
+    func testSuperclass() {
+        XCTAssertTrue(switchControl as Any is UIControl)
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    func testUnarchiving() {
+        let switchControl = SwitchControl(coder: .empty)
+        XCTAssertNil(switchControl)
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testFrame() {
+        XCTAssertEqual(switchControl.frame, .zero)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testSubviews() {
+        XCTAssertEqual(switchControl.subviews, [switchControl.stackView])
     }
-    
+
+    func testFontType() {
+        XCTAssertTrue(switchControl.font as Any is UIFont)
+    }
+
+    func testFontDefault() {
+        XCTAssertEqual(switchControl.font, SwitchControlLabel.preferredFont)
+    }
+
 }
