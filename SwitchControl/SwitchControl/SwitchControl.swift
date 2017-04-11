@@ -108,6 +108,7 @@ public class SwitchControl: UIControl {
         case .top: selectedSegment = .bottom
         case .bottom: selectedSegment = .top
         }
+        sendActions(for: .valueChanged)
     }
 
     // MARK: Accessibility
