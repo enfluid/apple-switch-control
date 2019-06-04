@@ -8,7 +8,7 @@ extension SwitchControlTests {
     }
 
     func testAccessibilityTraits() {
-        XCTAssertEqual(switchControl.accessibilityTraits, UIAccessibilityTraitButton)
+        XCTAssertEqual(switchControl.accessibilityTraits, UIAccessibilityTraits.button)
     }
 
     func testDefaultAccessibilityValue1() {
